@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="20">
+   <author>Marhu (improved by Bauer Hannsen)</author>
+    <title>
+		<en>RealTime</en>
+        <de>RealTime</de>        
+    </title>
+    <description>
+        <en>RealTime</en>
+		<de>RealTime</de>
+ 	</description>
+    <multiplayer supported="true"/>   
+	<iconFilename>store.png</iconFilename>
+	<version>1.2.10</version>
+	<extraSourceFiles>
+        <sourceFile filename="RealTime.lua" />
+    </extraSourceFiles>
+	<l10n>
+		<text name="HUD_day"><de>Tag</de><en>day</en></text>
+		<text name="0"><de>So</de><en>Sun</en></text>
+		<text name="1"><de>Mo</de><en>Mon</en></text>
+		<text name="2"><de>Di</de><en>Tue</en></text>
+		<text name="3"><de>Mi</de><en>Wed</en></text>
+		<text name="4"><de>Do</de><en>Thu</en></text>
+		<text name="5"><de>Fr</de><en>Fri</en></text>
+		<text name="6"><de>Sa</de><en>Sat</en></text>
+	</l10n>
+</modDesc>

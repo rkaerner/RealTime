@@ -1,0 +1,19 @@
+Änderungen:
+===========
+1.2.9
+- Erweiterung des Mods um die Anzeige des aktuellen Spieltags
+1.2.10
+- Hinzufügung des Wochentags im Spiel; Sonntag in rot
+1.2.11
+- Anpassung der Berechnung der x-Position für die Nutzung mit HUD Hider
+
+
+
+changes:
+========
+1.2.9
+- enhancement of existing mod showing the actual ingame day
+1.2.10
+- Adding the display of the ingame weekday; sunday in red color
+1.2.11
+- modification of calculating the x-position for usability with HUD Hider

@@ -3,16 +3,20 @@ local metadata = {
 "## Title: RealTime",
 "## Notes: Uhrzeit in Game",
 "## Author: Marhu",
-"## Version: 1.2.11",
-"## Date: 17.01.2015",
+"## Version: 1.2.12",
+"## Date: 17.04.2015",
 "## Web: http://marhu.net",
 "## Notes: Improvement by Bauer Hannsen"
 }
 
 RealTime = {};
+RealTime.dir = g_currentModDirectory;
+Sound = true;
 
 function RealTime:loadMap(name)
 	self.h = 0.015
+	self.sample = createSample("ChurchBells");
+	loadSample(self.sample, Utils.getFilename(self.dir .. "sound/church.wav", self.baseDirectory), false);
 end;
 
 function RealTime:deleteMap()
@@ -35,6 +39,14 @@ function RealTime:draw()
 		local WeekDay = math.mod(WhatDay, 7);
 		if WeekDay == 0 then
 			setTextColor(1, 0, 0, 1);
+			if Sound and g_currentMission.environment.currentHour == 9 and g_currentMission.environment.currentMinute == 50 then
+				if not self.SoundPlay then
+					self.SoundPlay = true;
+					playSample(self.sample, 1, 1, 0);
+				end;
+			else
+				self.SoundPlay = nil;
+			end;
 		end;
 		local weatherWidth = g_currentMission.weatherTimeBackgroundWidth;
 		if not g_currentMission.showWeatherForecast then

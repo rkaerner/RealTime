@@ -6,8 +6,9 @@
 - Hinzufügung des Wochentags im Spiel; Sonntag in rot
 1.2.11
 - Anpassung der Berechnung der x-Position für die Nutzung mit HUD Hider
-
-
+1.2.12
+- gewidmet dem Nutzer Sprinter auf marhu.net
+- Einbau eines Spezialeffekts (konfigurierbar (RealTime.lua, Zeile 14))
 
 changes:
 ========
@@ -17,3 +18,6 @@ changes:
 - Adding the display of the ingame weekday; sunday in red color
 1.2.11
 - modification of calculating the x-position for usability with HUD Hider
+1.2.12
+- dedicated to user Sprinter from marhu.net
+- integration of a special effect (configurable (RealTime.lua, line 14))

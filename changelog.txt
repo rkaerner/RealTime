@@ -9,7 +9,9 @@
 1.2.12
 - gewidmet dem Nutzer Sprinter auf marhu.net
 - Einbau eines Spezialeffekts (konfigurierbar (RealTime.lua, Zeile 14))
-
+1.2.13
+- Nach ein wenig Kampf mit playSample() die Lösung zur Reduzierung der Größe dersample Datei und damit der Größe des Archivs
+ 
 changes:
 ========
 1.2.9
@@ -21,3 +23,5 @@ changes:
 1.2.12
 - dedicated to user Sprinter from marhu.net
 - integration of a special effect (configurable (RealTime.lua, line 14))
+1.2.13
+- after messing around with playSample() for a while I got a solution to reduce the size of the sample file and so the size of the whole archive

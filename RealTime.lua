@@ -3,8 +3,8 @@ local metadata = {
 "## Title: RealTime",
 "## Notes: Uhrzeit in Game",
 "## Author: Marhu",
-"## Version: 1.2.12",
-"## Date: 17.04.2015",
+"## Version: 1.2.13",
+"## Date: 18.04.2015",
 "## Web: http://marhu.net",
 "## Notes: Improvement by Bauer Hannsen"
 }
@@ -19,7 +19,11 @@ function RealTime:loadMap(name)
 	loadSample(self.sample, Utils.getFilename(self.dir .. "sound/church.wav", self.baseDirectory), false);
 end;
 
-function RealTime:deleteMap()
+function RealTime:deleteMap(name)
+	if self.Soundplay then
+		stopSample(self.sample);
+		self.Soundplay = nil;
+	end;
 end;
 
 function RealTime:keyEvent(unicode, sym, modifier, isDown)
@@ -29,24 +33,33 @@ function RealTime:mouseEvent(posX, posY, isDown, isUp, button)
 end;
 
 function RealTime:update(dt)
+	getcurrentday();
+	if WeekDay == 0 then
+		if Sound and g_currentMission.environment.currentHour == 9 and g_currentMission.environment.currentMinute == 50 then
+			if not self.SoundPlay then
+				self.SoundPlay = true;
+				playSample(self.sample, 0, 1, self.sampleOffset);
+			end;
+		end;
+		if Sound and g_currentMission.environment.currentHour == 10 and g_currentMission.environment.currentMinute == 0 then
+			if self.SoundPlay then
+				self.Soundplay = nil;
+				stopSample(self.sample);
+			end;
+		end;
+	end;
+end;
+
+function RealTime:updateTick(dt)
 end;
 
 function RealTime:draw()
 	if g_currentMission.renderTime then
 		setTextColor(0,0,0,1);
 		setTextAlignment(RenderText.ALIGN_RIGHT);
-		local WhatDay = string.format("%f", g_currentMission.environment.currentDay);
-		local WeekDay = math.mod(WhatDay, 7);
+		getcurrentday();
 		if WeekDay == 0 then
 			setTextColor(1, 0, 0, 1);
-			if Sound and g_currentMission.environment.currentHour == 9 and g_currentMission.environment.currentMinute == 50 then
-				if not self.SoundPlay then
-					self.SoundPlay = true;
-					playSample(self.sample, 1, 1, 0);
-				end;
-			else
-				self.SoundPlay = nil;
-			end;
 		end;
 		local weatherWidth = g_currentMission.weatherTimeBackgroundWidth;
 		if not g_currentMission.showWeatherForecast then
@@ -59,6 +72,12 @@ function RealTime:draw()
 		setTextColor(1,1,1,1);
 		setTextAlignment(RenderText.ALIGN_LEFT);
 	end;
+end;
+
+function getcurrentday()
+		local WhatDay = string.format("%f", g_currentMission.environment.currentDay);
+		WeekDay = math.mod(WhatDay, 7);
+		return WeekDay;
 end;
 
 addModEventListener(RealTime);

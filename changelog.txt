@@ -11,6 +11,8 @@
 - Einbau eines Spezialeffekts (konfigurierbar (RealTime.lua, Zeile 14))
 1.2.13
 - Nach ein wenig Kampf mit playSample() die Lösung zur Reduzierung der Größe dersample Datei und damit der Größe des Archivs
+1.2.14
+- l10n nun auch in französisch verfügbar
  
 changes:
 ========
@@ -25,3 +27,5 @@ changes:
 - integration of a special effect (configurable (RealTime.lua, line 14))
 1.2.13
 - after messing around with playSample() for a while I got a solution to reduce the size of the sample file and so the size of the whole archive
+1.2.14
+- added l10n for french language

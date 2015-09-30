@@ -19,12 +19,12 @@
     </extraSourceFiles>
 	<l10n>
 		<text name="HUD_day"><de>Tag</de><en>day</en><fr>jour</fr></text>
-		<text name="0"><de>So</de><en>Sun</en><fr>lun</fr></text>
-		<text name="1"><de>Mo</de><en>Mon</en><fr>mar</fr></text>
-		<text name="2"><de>Di</de><en>Tue</en><fr>mer</fr></text>
-		<text name="3"><de>Mi</de><en>Wed</en><fr>jeu</fr></text>
-		<text name="4"><de>Do</de><en>Thu</en><fr>ven</fr></text>
-		<text name="5"><de>Fr</de><en>Fri</en><fr>sam</fr></text>
-		<text name="6"><de>Sa</de><en>Sat</en><fr>dim</fr></text>
-	</l10n>
+		<text name="0"><de>So</de><en>Sun</en><fr>dim</fr></text>
+		<text name="1"><de>Mo</de><en>Mon</en><fr>lun</fr></text>
+		<text name="2"><de>Di</de><en>Tue</en><fr>mar</fr></text>
+		<text name="3"><de>Mi</de><en>Wed</en><fr>mer</fr></text>
+		<text name="4"><de>Do</de><en>Thu</en><fr>jeu</fr></text>
+		<text name="5"><de>Fr</de><en>Fri</en><fr>ven</fr></text>
+		<text name="6"><de>Sa</de><en>Sat</en><fr>sam</fr></text>
+	</l10n>                                   
 </modDesc>
